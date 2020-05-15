@@ -2,7 +2,7 @@
 
 Validations using Yarn, Gulp, Bootstrap, SASS and Javascript.
 
-Validation of CPF, RG, Zip Code and E-mail.
+Validation of E-mail, CPF, RG and Zip Code .
 
 ## Installation
 
