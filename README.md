@@ -1,6 +1,7 @@
-# Boilerplate - Matheus Henrique
+# Validations with Javascript - Matheus Henrique
 
-Boilerplate using Yarn, Gulp, Bootstrap, e SASS.
+Validations using Yarn, Gulp, Bootstrap, SASS and Javascript.
+validation of CPF, RG, Zip Code and E-mail.
 
 ## Installation
 
