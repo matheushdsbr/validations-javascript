@@ -16,9 +16,6 @@
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 /* MOBILE STYLES ------------------------------------------------------------*/
-input[type="text"],
-input[type="email"],
-input[type="tel"],
 textarea {
   background-color: #fff;
   border-bottom: 1px solid #000;
@@ -67,3 +64,8 @@ body {
 /* MEDIA QUERY --------------------------------------------------------------*/
 /* MOBILE STYLES ------------------------------------------------------------*/
 /* MEDIA QUERY --------------------------------------------------------------*/
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }

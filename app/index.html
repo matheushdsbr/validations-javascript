@@ -3,16 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="src/css/bootstrap.css" />
     <link rel="stylesheet" href="src/css/style.css" />
-
-    <title>Boilerplate</title>
+    <title>Javascript - Validate</title>
   </head>
-
   <body>
-    <h1>Boilerplate FUNCIONOU!</h1>
-
+   <div class="container">
+     <div class="row">
+      <div class="col-md-4 offset-md-4 my-5">
+        <div class="main-form">
+          <h1>Form</h1>
+          <form>
+            <div class="form-group">
+              <label>Digite seu E-mail</label>
+              <input type="email" class="form-control email" placeholder="something@something.com">
+            </div>
+            <div class="form-group">
+              <label>Digite seu CPF</label>
+              <input type="text" class="form-control cpf" placeholder="123.456.789-12">
+            </div>
+            <div class="form-group">
+              <label>Digite seu CEP</label>
+              <input type="text" class="form-control cep" placeholder="12345-678">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+         </div>
+      </div>
+     </div>
+      </div>
     <script src="src/js/jquery.js"></script>
     <script src="src/js/popper.js"></script>
     <script src="src/js/bootstrap.js"></script>
