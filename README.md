@@ -1,7 +1,8 @@
 # Validations with Javascript - Matheus Henrique
 
 Validations using Yarn, Gulp, Bootstrap, SASS and Javascript.
-validation of CPF, RG, Zip Code and E-mail.
+
+Validation of CPF, RG, Zip Code and E-mail.
 
 ## Installation
 
