@@ -6,7 +6,6 @@ $(function() {
 
   function validarCPF(cpf) {
     cpf = cpf.replace(/[^\d]+/g,'');
-    console.log(cpf);
     if(cpf == '') return false;
     // Elimina CPFs invalidos conhecidos
     if (cpf.length != 11 ||
@@ -42,18 +41,58 @@ $(function() {
     return true;
   }
 
-  $('.cpf').mask('000.000.000-00');
+  function validarRG(rg){
+    rg=rg.replace(/\D/g,"");
+    if (rg.length != 7 ||
+      rg == "0000000" ||
+      rg == "1111111" ||
+      rg == "2222222" ||
+      rg == "3333333" ||
+      rg == "4444444" ||
+      rg == "5555555" ||
+      rg == "6666666" ||
+      rg == "7777777" ||
+      rg == "8888888" ||
+      rg == "9999999"){
+        return false;
+      }
+      return rg;
+    }
+
+  function validarCEP(cep){
+    cep=cep.replace(/\D/g,"");
+    if (cep.length != 8 ||
+      cep == "00000000" ||
+      cep == "11111111" ||
+      cep == "22222222" ||
+      cep == "33333333" ||
+      cep == "44444444" ||
+      cep == "55555555" ||
+      cep == "66666666" ||
+      cep == "77777777" ||
+      cep == "88888888" ||
+      cep == "99999999") {
+      return false;
+    }
+    return cep;
+  }
+
+  $('.cpf').mask('000.000.000-00');// 11 digitos
+  $('.rg').mask('0.000.000');// 7 digitos
+  $('.cep').mask('00000-000');// 8 digitos
 
   $("form").submit(function(e) {
     e.preventDefault();
     if (validateEmail($(this).find($(".email")).val())) {
      $(this).find($(".email")).removeAttr("style");
      $(this).find($(".span-email")).hide();
+     console.log($(this).find($(".email")).val());
     } else {
       $(this).find($(".span-email")).show();
       $(this).find($(".span-email")).text("*Email Inválido!");
       $(this).find($(".span-email")).css("color", "red");
       $(this).find($(".email")).css("border", "1px solid red");
+      console.log($(this).find($(".email")).val());
     }
 
     if (validarCPF($(this).find($(".cpf")).val())) {
@@ -66,6 +105,30 @@ $(function() {
        $(this).find($(".span-cpf")).css("color", "red");
        $(this).find($(".cpf")).css("border", "1px solid red");
        console.log($(this).find($(".cpf")).val());
+     }
+
+     if (validarRG($(this).find($(".rg")).val())) {
+      $(this).find($(".rg")).removeAttr("style");
+      $(this).find($(".span-rg")).hide();
+      console.log($(this).find($(".rg")).val());
+     } else {
+       $(this).find($(".span-rg")).show();
+       $(this).find($(".span-rg")).text("*RG Inválido!");
+       $(this).find($(".span-rg")).css("color", "red");
+       $(this).find($(".rg")).css("border", "1px solid red");
+       console.log($(this).find($(".rg")).val());
+     }
+
+     if (validarCEP($(this).find($(".cep")).val())) {
+      $(this).find($(".cep")).removeAttr("style");
+      $(this).find($(".span-cep")).hide();
+      console.log($(this).find($(".cep")).val());
+     } else {
+       $(this).find($(".span-cep")).show();
+       $(this).find($(".span-cep")).text("*CEP Inválido!");
+       $(this).find($(".span-cep")).css("color", "red");
+       $(this).find($(".cep")).css("border", "1px solid red");
+       console.log($(this).find($(".cep")).val());
      }
   });
 });
