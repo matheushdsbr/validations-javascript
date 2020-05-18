@@ -40,5 +40,3 @@ http://localhost:3000/
 ```
 yarn start
 ```
-
-# boilerplate-1
