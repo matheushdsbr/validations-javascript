@@ -3,17 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="src/css/bootstrap.css" />
     <link rel="stylesheet" href="src/css/style.css" />
-
-    <title>Boilerplate</title>
+    <title>Javascript - Validate</title>
   </head>
-
   <body>
-    <h1>Boilerplate FUNCIONOU!</h1>
-
+   <div class="container">
+     <div class="row">
+      <div class="col-md-4 offset-md-4 my-5">
+        <div class="main-form">
+          <h1>Form</h1>
+          <form>
+            <div class="form-group">
+              <label>Digite seu E-mail</label>
+              <input type="text" class="form-control email" placeholder="example@exemple.com">
+              <span class="span-email"></span>
+            </div>
+            <div class="form-group">
+              <label>Digite seu CPF</label>
+              <input id="cpf" type="text" class="form-control cpf" placeholder="ex: 123.456.789-12">
+              <span class="span-cpf"></span>
+            </div>
+            <div class="form-group">
+              <label>Digite seu RG</label>
+              <input type="text" class="form-control rg" placeholder="ex: 1.123.456">
+              <span class="span-rg"></span>
+            </div>
+            <div class="form-group">
+              <label>Digite seu CEP</label>
+              <input type="text" class="form-control cep" placeholder="ex: 12345-678">
+              <span class="span-cep"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+         </div>
+      </div>
+     </div>
+      </div>
     <script src="src/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="src/js/popper.js"></script>
     <script src="src/js/bootstrap.js"></script>
     <script src="src/js/main.js"></script>
